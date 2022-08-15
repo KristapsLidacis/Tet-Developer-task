@@ -17,16 +17,17 @@ class PurchaseController extends Controller
 
     public function purchase(Request $request)
     {
-//        $request->validate([
-//            'userId' => 'required',
-//            'userName' => 'required',
-//            'userEmail' => 'required',
-//            'itemId' => 'required',
-//            'itemName' => 'required',
-//            'itemPrice' => 'required'
-//        ]);
-        var_dump($_POST);
-        return "alert('success)";
-        //return redirect('/items');
+        $request->validate([
+            'userId' => 'required',
+            'userName' => 'required',
+            'userEmail' => 'required',
+            'itemId' => 'required',
+            'itemName' => 'required',
+            'itemPrice' => 'required'
+        ]);
+        echo'<pre>';
+        echo(request()->all());die;
+
+        return redirect('/items');
     }
 }
