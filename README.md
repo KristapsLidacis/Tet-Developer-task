@@ -29,3 +29,21 @@ Recommended technologies:<br>
 Backend: PHP (Laravel, Symfony), Kafka, RabbitMQ, Redis, PostgreSQL (or any other persistent storage).<br>
 Frontend: Angular, Vue.js, React, or any other SPA framework.<br>
 It should be possible to set up the entire system with a single Docker Compose file.</p>
+
+
+<p>In this task I created:<br>
+    - UserController - controller to get information about specific user (used for dependency injection) GET /users/{id}<br>
+    - UsersController - controller to get information about all users (used for dependency injection) GET /users<br>
+    - UserService - is called by UserController to get information about specific user<br>
+    - UsersService - is called by UsersController to get infromation about all users<br>
+    - UserModel - model for on user (id, firstName, lastName, email)<br>
+    - UserModelList - list (array) model that consists of all the UserModel users<br>
+    - PurchaseController - controller to get information POST payload (only managed to get this far)<br>
+    - ItemsRequestService - used by UserController to retrive all information about specific user items<br>
+    - ItemsModel - model for one item (id, name, price, userId)<br>
+    - ItemsModelList - collection of ItemsModel objects <br>
+    - MySQLUserRepository - repository that is used to get information out of database:<br>
+    - For front-end testing I used deafault blade template (plan was to use angular), but I ran out of time.<br>
+    - For data storing I used MySQL database where I created two tables users(id, first_name, last_name, email) and items(id, name, price, user_id)<br></p>
+    
+    
